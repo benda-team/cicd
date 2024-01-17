@@ -19,9 +19,7 @@ jobs:
       with: 
          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
          script: |
-          ssh root@139.162.42.67 'cd /home/od/cicd'
-          git status
-          git pull          
+          ssh root@139.162.42.67 'cd /home/od/cicd && git status && git pull'
       
      
 
