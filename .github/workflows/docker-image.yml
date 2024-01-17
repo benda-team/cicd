@@ -18,9 +18,8 @@ jobs:
       uses: webfactory/ssh-agent@v0.8.0
       with: 
          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: Deploy
-      run: |
-         ssh root@139.162.42.67 'cd /home/od/cicd && git status && git pull'
-    
+         script: |
+          ssh root@139.162.42.67 'bash -s' < .github/scripts/deploy.sh
+      
      
 
