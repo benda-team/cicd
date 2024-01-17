@@ -26,11 +26,12 @@ jobs:
     - name: Set up SSH
       uses: webfactory/ssh-agent@v0.8.0
       with: 
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: Deploy to Server
-      run: |
-        # Connecting to server
-        ssh root@139.162.42.67 'cd /home/od/cicd && git pull'
+         host: ${{ secrets.SERVER_HOST }}
+         username: ${{ secrets.SERVER_USERNAME }}
+         key: ${{ secrets.SSH_PRIVATE_KEY }}
+         passphrase: ${{ secrets.SSH_PRIVATE_KEY_PASSPHRASE }}
+         script: |
+          ssh root@139.162.42.67 'cd /home/od/cicd && git pull'
       
      
 
