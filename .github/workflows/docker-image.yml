@@ -21,7 +21,7 @@ jobs:
 
     - name: Deploy to Server
       run: |
-          ssh root@139.162.42.67 'bash -s' < .github/scripts/deploy.sh
+          ssh root@139.162.42.67 'cd /home/od/cicd && git pull'
       
      
 
