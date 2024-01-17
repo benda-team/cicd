@@ -28,8 +28,8 @@ jobs:
       with: ssh-private-key:${{secrets.STA}}
     - name: Deploy to Server
       run: |
-      # Connecting to server
-      ssh root@139.162.42.67 'cd /home/od/cicd && git pull'
+        # Connecting to server
+        ssh root@139.162.42.67 'cd /home/od/cicd && git pull'
       
      
 
