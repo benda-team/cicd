@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+# API
+  cppromotionapi:
+    image: ${DOCKER_REGISTRY-}cppromotionapi
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '1024M'
+    networks:
+      ones_network:
+    container_name: 'cppromotionapi_containername'    
+    build:
+      context: .
+      dockerfile: ODTradePromotion.API/Dockerfile
+volumes:
+  cppromotionapi:  
+networks:
+  # my-network:
+  #   driver: bridge
+  ones_network:
+    external: true

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:47016",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+
+        // Site CP
+        //"CONNECTION": "Server=14.161.18.75;Port=7332;Database=cprdos_system;User Id=cprdos;Password=P@ssw0rd2023",
+        //"PRINCIPALCODE": "ONES",
+        //"EcoGateway": "https://ones-api.vndigitech.com/v1/"
+
+        // Site OD
+         "CONNECTION": "Server=14.161.18.75;Port=7401;Database=ones_od_system;User Id=digiecosystem;Password=P@ssw0rd2023",
+         "PRINCIPALCODE": "DIGI",
+         "EcoGateway": "https://digi-api.vndigitech.com/v1/"
+
+      }
+    },
+    "ODTradePromotion.API": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000",
+      "dotnetRunMessages": "true"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CONNECTION": "Server=10.32.4.160;Port=5432;Database=rdos_system_dev;User Id=postgres;Password=PAssword123"
+      },
+      "publishAllPorts": true
+    }
+  }
+}
