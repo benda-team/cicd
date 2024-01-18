@@ -22,7 +22,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker-compose up -d --build
+          docker-compose build
           docker tag cppromotionapi:latest tungphien/cppromotionapi:latest
           docker push tungphien/cppromotionapi:latest
 
