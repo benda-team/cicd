@@ -25,7 +25,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/od/cicd
-            docker-compose up -d
+            mkdir demo
+            #docker-compose up -d
       #- name: Build and push Docker image
       #  run: |
       #    docker-compose -f docker-compose.yml build
