@@ -18,4 +18,4 @@ jobs:
 
     - name: Deploy to CentOS server
       run: |
-        ssh root@1.53.82.154 "mkdir demofromgitaction"
+        ssh root@100.119.213.247 "mkdir demofromgitaction"
