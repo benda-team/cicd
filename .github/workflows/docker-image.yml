@@ -39,5 +39,4 @@ jobs:
 
     - name: Deploy to CentOS server
       run: |
-        #scp -r ./path/to/your/app user@your.centos.server:/path/to/destination
         ssh root@139.162.42.67 "cd /home/od/cicd && docker-compose pull && docker-compose up -d"
