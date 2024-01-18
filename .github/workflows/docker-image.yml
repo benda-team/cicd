@@ -25,4 +25,19 @@ jobs:
           docker-compose build
           docker tag cppromotionapi:latest tungphien/cppromotionapi:latest
           docker push tungphien/cppromotionapi:latest
+  
+  deploy:
+    runs-on: ubuntu-latest
 
+    needs: build
+
+    steps:
+    - name: Install SSH key
+      uses: webfactory/ssh-agent@v0.8.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Deploy to CentOS server
+      run: |
+        #scp -r ./path/to/your/app user@your.centos.server:/path/to/destination
+        ssh root@139.162.42.67 "cd /home/od/cicd && docker-compose pull && docker-compose up -d"
