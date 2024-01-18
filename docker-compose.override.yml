@@ -12,7 +12,7 @@ services:
       - CONNECTION=Server=14.161.18.75;Port=7332;Database=cprdos_system;User Id=cprdos;Password=P@ssw0rd2023
       - IS_DEPLOY=true
     ports:
-      - "5329:80"
+      - "5340:80"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
