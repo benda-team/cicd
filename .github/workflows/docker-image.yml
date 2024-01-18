@@ -23,6 +23,6 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t cppromotionapi:latest .
-          docker tag cppromotionapi:latest tungphie/cppromotionapi:latest
-          docker push tungphie/cppromotionapi:latest
+          docker tag cppromotionapi:latest tungphien/cppromotionapi:latest
+          docker push tungphien/cppromotionapi:latest
 
