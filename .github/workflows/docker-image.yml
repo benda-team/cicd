@@ -14,8 +14,8 @@ jobs:
     - name: Install SSH key
       uses: webfactory/ssh-agent@v0.8.0
       with:
-        ssh-private-key: ${{ secrets.MY_LAPTOP_SSH_PRIVATE_KEY }}
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Deploy to CentOS server
       run: |
-        ssh root@100.119.213.247 "mkdir demofromgitaction"
+        ssh root@139.162.42.67 "cd /home/od/cicd && ls"
