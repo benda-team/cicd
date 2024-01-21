@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print Triggered Branch
-      run: echo "The triggered branch is ${{ github.ref }}"
+      run: echo "The triggered branch is ${GITHUB_REF#refs/heads/}"
   
     - name: Deploy to CentOS server
       uses: appleboy/ssh-action@master
